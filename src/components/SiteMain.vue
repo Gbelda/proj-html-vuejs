@@ -24,17 +24,33 @@
     </section>
     <!-- ./Services Section -->
 
-    <section class="staff"></section>
+    <section class="staff">
+      <section-heading :icon="'icon-5.png'" :title="'MEET OUR DOCTORS'" />
+      <div class="row d-flex justify-between">
+        <staff-card
+          v-for="doctor in doctors"
+          :key="doctor.name"
+          :img="doctor.img"
+          :name="doctor.name"
+          :job="doctor.job"
+          :text="doctor.text"
+        />
+      </div>
+    </section>
   </main>
 </template>
 
 <script>
 import Jumbotron from "./Jumbotron.vue";
+import SectionHeading from "./SectionHeading.vue";
 import ServicesCard from "./ServicesCard.vue";
+import StaffCard from "./StaffCard.vue";
 export default {
   components: {
     Jumbotron,
     ServicesCard,
+    SectionHeading,
+    StaffCard,
   },
   data() {
     return {
@@ -60,6 +76,26 @@ export default {
           text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
         },
       ],
+      doctors: [
+        {
+          img: "doctor-1.jpg",
+          name: "Jon Snow",
+          job: "Anesthesiologist",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
+        },
+        {
+          img: "doctor-2.jpg",
+          name: "Tony Stark",
+          job: "Cardiologist",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
+        },
+        {
+          img: "doctor-3.jpg",
+          name: "Anna Smith",
+          job: "Nurse Practitioner",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
+        },
+      ],
     };
   },
 };
@@ -81,6 +117,7 @@ export default {
       font-weight: 300;
       padding-bottom: 1rem;
       font-size: 2.5rem;
+      color: gray;
     }
 
     p {
@@ -89,6 +126,14 @@ export default {
       color: $text_gray;
       font-size: 1.4rem;
     }
+  }
+}
+.staff {
+  background-color: $bg_gray;
+
+  .row {
+    width: 60%;
+    margin: auto;
   }
 }
 </style>
