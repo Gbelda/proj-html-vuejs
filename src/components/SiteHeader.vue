@@ -52,6 +52,8 @@ export default {
 header {
   background-color: transparent;
   height: 90px;
+  position: absolute;
+  width: 100%;
 
   nav {
     width: 100%;
