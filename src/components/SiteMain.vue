@@ -1,61 +1,88 @@
 <template>
   <main>
-    <section class="jumbotron">
-      <div class="jumbo_txt">
-        <h1>
-          Caring
-          <span class="highlight">For Life</span>
-        </h1>
+    <jumbotron />
+    <section class="services text-center">
+      <div class="section_head">
+        <h2>Welcome to Avada Health</h2>
         <p>
-          Kind words can be short and easy to speak, but their echoes are truly
-          endless. Avada Health focuses on you as if it was our own family.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae
+          ab illo
         </p>
-        <button>LEARN MORE</button>
+      </div>
+      <div class="row d-flex justify-between">
+        <services-card
+          v-for="service in services"
+          :key="service.icon"
+          :section_text="service.text"
+          :section_title="service.title"
+          :icon="service.icon"
+        />
       </div>
     </section>
   </main>
 </template>
 
 <script>
-export default {};
+import Jumbotron from "./Jumbotron.vue";
+import ServicesCard from "./ServicesCard.vue";
+export default {
+  components: {
+    Jumbotron,
+    ServicesCard,
+  },
+  data() {
+    return {
+      services: [
+        {
+          icon: "icon-1.png",
+          title: "same day appointments",
+          text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+        },
+        {
+          icon: "icon-2.png",
+          title: "world class facilities",
+          text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+        },
+        {
+          icon: "icon-3.png",
+          title: "expert doctors",
+          text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+        },
+        {
+          icon: "icon-4.png",
+          title: "complementary therapies",
+          text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
-.jumbotron {
-  min-height: 100vh;
-  background-image: url(../assets/img/header-image-homepage.jpg);
-  background-size: 113%;
-  background-position-x: center;
+.services {
+  width: 60%;
+  margin: auto;
+  font-weight: 300;
+  line-height: 2rem;
+  margin-top: 5rem;
+  line-height: 2.5rem;
 
-  .jumbo_txt {
-    width: 55%;
-    padding-top: 19rem;
-    margin: auto;
-    color: white;
-
-    h1 {
+  .section_head {
+    h2 {
+      color: $text_primary;
       font-weight: 300;
-      font-size: 4rem;
-
-      .highlight {
-        color: $highlight_primary;
-      }
+      padding-bottom: 1rem;
+      font-size: 2.5rem;
     }
+
     p {
-      font-weight: 300;
-      font-size: 1.2rem;
-      width: 60%;
-      padding: 2.2rem 0px;
-    }
-
-    button {
-      font-size: 1rem;
-      padding: 0.9rem 2.5rem;
-      background-color: $highlight_primary;
-      color: white;
-      border: none;
-      border-radius: 3px;
+      margin: auto;
+      width: 70%;
+      color: $text_gray;
+      font-size: 1.4rem;
     }
   }
 }
