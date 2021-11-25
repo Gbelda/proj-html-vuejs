@@ -5,6 +5,10 @@
 
 }
 
+body{
+font-family: 'Noto Sans JP', sans-serif;
+}
+
 .d-flex{
     display: flex;
 }
@@ -22,10 +26,9 @@
 }
 
 .align-center{
-    align-content: center;
+    align-items: center;
 }
 
 .text-center{
     text-align: center;
 }
-
