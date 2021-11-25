@@ -1,6 +1,8 @@
 <template>
   <main>
     <jumbotron />
+    <!-- ./Jumbotron -->
+
     <section class="services text-center">
       <div class="section_head">
         <h2>Welcome to Avada Health</h2>
@@ -20,6 +22,9 @@
         />
       </div>
     </section>
+    <!-- ./Services Section -->
+
+    <section class="staff"></section>
   </main>
 </template>
 

@@ -1,15 +1,26 @@
 <template>
-  <header class="d-flex align-center">
+  <header
+    class="d-flex align-center"
+    :class="{ change_color: scrollPosition > 50 }"
+  >
     <nav class="d-flex justify-between align-center">
       <div class="logo">
-        <img src="../assets/img/medical_logo_1x_light.png" alt="" />
+        <img
+          v-if="this.scrollPosition < 50"
+          src="../assets/img/medical_logo_1x_light.png"
+          alt=""
+        />
+        <img v-else src="../assets/img/medical_logo_1x_dark.png" alt="" />
       </div>
       <div class="nav_options d-flex align-center">
         <ul class="nav_index d-flex">
           <li
             v-for="page in pages"
             :key="page.section"
-            :class="{ selected: page.selected }"
+            :class="{
+              selected: page.selected,
+              change_text: scrollPosition > 50,
+            }"
           >
             {{ page.section.toUpperCase() }}
           </li>
@@ -24,6 +35,7 @@
 export default {
   data() {
     return {
+      scrollPosition: null,
       pages: [
         {
           section: "home",
@@ -44,6 +56,14 @@ export default {
       ],
     };
   },
+  methods: {
+    updateScroll() {
+      this.scrollPosition = window.scrollY;
+    },
+  },
+  mounted() {
+    window.addEventListener("scroll", this.updateScroll);
+  },
 };
 </script>
 
@@ -52,8 +72,9 @@ export default {
 header {
   background-color: transparent;
   height: 90px;
-  position: absolute;
+  position: fixed;
   width: 100%;
+  transition: ease 500ms;
 
   nav {
     width: 100%;
@@ -89,6 +110,13 @@ header {
       border: none;
       border-radius: 3px;
     }
+  }
+}
+.change_color {
+  background-color: white;
+
+  .change_text {
+    color: black;
   }
 }
 </style>
