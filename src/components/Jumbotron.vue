@@ -21,8 +21,7 @@ export default {};
 <style lang="scss">
 @import "../assets/scss/variables.scss";
 .jumbotron {
-  min-height: 100vh;
-  min-width: 100vw;
+  height: 100vh;
   background-image: url(../assets/img/header-image-homepage.jpg);
   background-repeat: no-repeat;
   background-size: 113%;
