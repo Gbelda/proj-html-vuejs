@@ -20,10 +20,12 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
+
 .card {
   width: 24%;
   color: $text_gray;
   padding: 4rem 0px;
+
   h3 {
     font-weight: 300;
   }
