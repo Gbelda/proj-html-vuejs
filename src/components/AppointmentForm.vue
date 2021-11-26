@@ -49,6 +49,7 @@ export default {};
     position: relative;
     background-color: transparent;
     border: 1px solid rgb(194, 194, 194);
+    color: white;
 
     &::placeholder {
       color: rgb(194, 194, 194);
@@ -92,6 +93,7 @@ export default {};
     font-family: "Noto Sans JP", sans-serif;
     border: 1px solid rgb(194, 194, 194);
     margin-bottom: 2rem;
+    color: white;
 
     &::placeholder {
       color: rgb(194, 194, 194);

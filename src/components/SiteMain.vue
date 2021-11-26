@@ -93,6 +93,15 @@
       </div>
       <appointment-form />
     </section>
+    <!-- ./APPOINTMENT -->
+
+    <section class="partners">
+      <div class="container d-flex">
+        <div class="img_card" v-for="(partner, index) in partners" :key="index">
+          <img :src="require(`../assets/img/${partner.img}`)" alt="" />
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -205,6 +214,20 @@ export default {
           class: "rehab",
         },
       ],
+      partners: [
+        {
+          img: "client-logos-1.png",
+        },
+        {
+          img: "client-logos-2.png",
+        },
+        {
+          img: "client-logos-3.png",
+        },
+        {
+          img: "client-logos-4.png",
+        },
+      ],
     };
   },
 };
@@ -301,10 +324,30 @@ export default {
 .appointment {
   background-image: url(../assets/img/appointment.jpg);
   background-position: center;
+  background-size: cover;
 
   h2,
   p {
     color: white;
+  }
+}
+
+/********************************** PARTNERS **********************************/
+.partners {
+  background-image: url(../assets/img/carousel-bg.jpg);
+  height: 300px;
+
+  .container {
+    width: 60%;
+    margin: auto;
+
+    .img_card {
+      width: calc(100% / 3);
+
+      img {
+        padding-top: 2rem;
+      }
+    }
   }
 }
 </style>
