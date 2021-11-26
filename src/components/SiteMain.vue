@@ -1,9 +1,9 @@
 <template>
   <main>
     <jumbotron />
-    <!-- ./Jumbotron -->
+    <!-- ./JUMBOTRON -->
 
-    <section class="services text-center">
+    <section class="features text-center">
       <div class="section_head">
         <h2>Welcome to Avada Health</h2>
         <p>
@@ -13,16 +13,16 @@
         </p>
       </div>
       <div class="row d-flex justify-between">
-        <services-card
-          v-for="service in services"
-          :key="service.icon"
-          :section_text="service.text"
-          :section_title="service.title"
-          :icon="service.icon"
+        <features-card
+          v-for="feature in features"
+          :key="feature.icon"
+          :section_text="feature.text"
+          :section_title="feature.title"
+          :icon="feature.icon"
         />
       </div>
     </section>
-    <!-- ./Services Section -->
+    <!-- ./SERVICES SECTION -->
 
     <section class="staff">
       <section-heading :icon="'icon-5.png'" :title="'MEET OUR DOCTORS'" />
@@ -37,24 +37,25 @@
         />
       </div>
     </section>
+    <!-- ./STAFF DOCTORS SECTION -->
   </main>
 </template>
 
 <script>
 import Jumbotron from "./Jumbotron.vue";
 import SectionHeading from "./SectionHeading.vue";
-import ServicesCard from "./ServicesCard.vue";
+import FeaturesCard from "./FeaturesCard.vue";
 import StaffCard from "./StaffCard.vue";
 export default {
   components: {
     Jumbotron,
-    ServicesCard,
     SectionHeading,
     StaffCard,
+    FeaturesCard,
   },
   data() {
     return {
-      services: [
+      features: [
         {
           icon: "icon-1.png",
           title: "same day appointments",
@@ -103,7 +104,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
-.services {
+.features {
   width: 60%;
   margin: auto;
   font-weight: 300;

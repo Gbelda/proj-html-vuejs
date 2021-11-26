@@ -30,7 +30,7 @@ export default {};
   .jumbo_txt {
     width: 60%;
     padding-left: 2rem;
-    padding-top: 18rem;
+    padding-top: 19rem;
     margin: auto;
     color: white;
 
