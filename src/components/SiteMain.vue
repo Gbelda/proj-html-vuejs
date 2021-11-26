@@ -100,6 +100,20 @@
         <div class="img_card" v-for="(partner, index) in partners" :key="index">
           <img :src="require(`../assets/img/${partner.img}`)" alt="" />
         </div>
+        <div
+          class="img_card"
+          v-for="(partner, index) in partners"
+          :key="`${index} + 1`"
+        >
+          <img :src="require(`../assets/img/${partner.img}`)" alt="" />
+        </div>
+        <div
+          class="img_card"
+          v-for="(partner, index) in partners"
+          :key="`${index} + 2`"
+        >
+          <img :src="require(`../assets/img/${partner.img}`)" alt="" />
+        </div>
       </div>
     </section>
   </main>
@@ -338,14 +352,25 @@ export default {
   height: 300px;
 
   .container {
-    width: 60%;
+    width: 50%;
+    overflow-x: hidden;
     margin: auto;
 
     .img_card {
       width: calc(100% / 3);
+      animation: scroll 30s linear infinite;
 
       img {
         padding-top: 2rem;
+      }
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-270px * 4));
       }
     }
   }
