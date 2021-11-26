@@ -63,30 +63,13 @@
       <!-- ./FACILITIES HEADER -->
 
       <div class="departments d-flex">
-        <div class="facility emergency_care">
-          <h4>Emergency Care</h4>
-          <img src="../assets/img/wave-divider.png" alt="" />
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque
-          </p>
-        </div>
-        <div class="facility diagnostics">
-          <h4>Expert Diagnostics</h4>
-          <img src="../assets/img/wave-divider.png" alt="" />
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque
-          </p>
-        </div>
-        <div class="facility rehab">
-          <h4>Superb Rehabilitation</h4>
-          <img src="../assets/img/wave-divider.png" alt="" />
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque
-          </p>
-        </div>
+        <department-card
+          v-for="department in departments"
+          :key="department.name"
+          :Id="department.class"
+          :name="department.name"
+          :text="department.text"
+        />
       </div>
       <!-- ./DEPARTMENTS -->
     </section>
@@ -98,12 +81,14 @@ import Jumbotron from "./Jumbotron.vue";
 import SectionHeading from "./SectionHeading.vue";
 import FeaturesCard from "./FeaturesCard.vue";
 import StaffCard from "./StaffCard.vue";
+import DepartmentCard from "./DepartmentCard.vue";
 export default {
   components: {
     Jumbotron,
     SectionHeading,
     StaffCard,
     FeaturesCard,
+    DepartmentCard,
   },
   data() {
     return {
@@ -179,6 +164,23 @@ export default {
           icon: "icon-13.png",
           title: "medical counseling",
           text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas",
+        },
+      ],
+      departments: [
+        {
+          name: "Emergency Care",
+          text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque",
+          class: "emergency_care",
+        },
+        {
+          name: "Expert Diagnostics",
+          text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque",
+          class: "diagnostics",
+        },
+        {
+          name: "Superb Rehabilitation",
+          text: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque",
+          class: "rehab",
         },
       ],
     };
@@ -259,32 +261,6 @@ export default {
   }
 
   .departments {
-    .facility {
-      width: calc(100% / 3);
-      text-align: center;
-      height: 250px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      line-height: 2.5rem;
-
-      img {
-        width: 10%;
-      }
-
-      h4 {
-        font-weight: 400;
-        font-size: 1.2rem;
-        padding-bottom: 0.5rem;
-      }
-
-      p {
-        font-weight: 300;
-        font-size: 0.9rem;
-      }
-    }
-
     .emergency_care {
       background-color: #3aafbf;
     }
