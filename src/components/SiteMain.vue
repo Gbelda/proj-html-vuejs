@@ -317,9 +317,14 @@ export default {
 
   .play_container {
     padding-bottom: 9rem;
+
+    img {
+      filter: hue-rotate(50deg);
+    }
   }
 
   .departments {
+    filter: hue-rotate(45deg);
     .emergency_care {
       background-color: #3aafbf;
     }
@@ -350,9 +355,10 @@ export default {
 .partners {
   background-image: url(../assets/img/carousel-bg.jpg);
   height: 300px;
+  filter: hue-rotate(45deg);
 
   .container {
-    width: 50%;
+    width: 60%;
     overflow-x: hidden;
     margin: auto;
 

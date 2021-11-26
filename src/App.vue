@@ -1,13 +1,17 @@
 <template>
   <div id="app">
     <site-header />
-    <!-- ./SiteHeader -->
+    <!-- ./SITE HEADER -->
 
     <site-main />
+    <!-- ./SITE MAIN -->
+
+    <site-footer />
   </div>
 </template>
 
 <script>
+import SiteFooter from "./components/SiteFooter.vue";
 import SiteHeader from "./components/SiteHeader.vue";
 import SiteMain from "./components/SiteMain.vue";
 export default {
@@ -15,6 +19,7 @@ export default {
   components: {
     SiteHeader,
     SiteMain,
+    SiteFooter,
   },
 };
 </script>

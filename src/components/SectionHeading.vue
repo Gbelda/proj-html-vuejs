@@ -29,6 +29,10 @@ export default {
   margin: auto;
   padding-top: 5rem;
 
+  img {
+    filter: hue-rotate(50deg);
+  }
+
   h2 {
     padding-bottom: 2.5rem;
     font-weight: 300;

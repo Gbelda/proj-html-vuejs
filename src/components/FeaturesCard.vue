@@ -26,6 +26,10 @@ export default {
   color: $text_gray;
   padding: 4rem 0px;
 
+  img {
+    filter: hue-rotate(50deg);
+  }
+
   h3 {
     font-weight: 300;
   }
