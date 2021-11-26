@@ -1,6 +1,6 @@
 <template>
   <div class="section_header">
-    <img :src="require(`../assets/img/${icon}`)" alt="" />
+    <img :src="require(`../assets/img/${icon}`)" alt="" v-if="withIcon" />
     <h2>{{ title }}</h2>
     <hr />
     <p>
@@ -16,6 +16,7 @@ export default {
   props: {
     icon: String,
     title: String,
+    withIcon: Boolean,
   },
 };
 </script>

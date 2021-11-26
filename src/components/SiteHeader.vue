@@ -75,6 +75,7 @@ header {
   position: fixed;
   width: 100%;
   transition: ease 500ms;
+  z-index: 99;
 
   nav {
     width: 100%;

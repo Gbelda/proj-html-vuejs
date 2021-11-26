@@ -25,7 +25,11 @@
     <!-- ./HOSPITAL FEATURES SECTION -->
 
     <section class="staff">
-      <section-heading :icon="'icon-5.png'" :title="'MEET OUR DOCTORS'" />
+      <section-heading
+        :icon="'icon-5.png'"
+        :title="'MEET OUR DOCTORS'"
+        :withIcon="true"
+      />
       <div class="row d-flex justify-between">
         <staff-card
           v-for="doctor in doctors"
@@ -40,7 +44,11 @@
     <!-- ./STAFF DOCTORS SECTION -->
 
     <section class="services">
-      <section-heading :icon="'icon-6.png'" :title="'OUR HEALTH SERVICES'" />
+      <section-heading
+        :icon="'icon-6.png'"
+        :title="'OUR HEALTH SERVICES'"
+        :withIcon="true"
+      />
       <div class="row d-flex justify-between flex-wrap">
         <features-card
           v-for="service in services"
@@ -55,7 +63,11 @@
 
     <section class="facilities">
       <div class="facilities_header d-flex flex-column align-center">
-        <section-heading :icon="'icon-7.png'" :title="'TOUR OUR FACILITIES'" />
+        <section-heading
+          :icon="'icon-7.png'"
+          :title="'TOUR OUR FACILITIES'"
+          :withIcon="true"
+        />
         <div class="play_container">
           <img src="../assets/img/play-icon.png" alt="" id="play-icon" />
         </div>
@@ -73,6 +85,14 @@
       </div>
       <!-- ./DEPARTMENTS -->
     </section>
+    <!--./FACILITIES -->
+
+    <section class="appointment">
+      <div class="container">
+        <section-heading :withIcon="false" :title="'Make An Appointment'" />
+      </div>
+      <appointment-form />
+    </section>
   </main>
 </template>
 
@@ -82,6 +102,7 @@ import SectionHeading from "./SectionHeading.vue";
 import FeaturesCard from "./FeaturesCard.vue";
 import StaffCard from "./StaffCard.vue";
 import DepartmentCard from "./DepartmentCard.vue";
+import AppointmentForm from "./AppointmentForm.vue";
 export default {
   components: {
     Jumbotron,
@@ -89,6 +110,7 @@ export default {
     StaffCard,
     FeaturesCard,
     DepartmentCard,
+    AppointmentForm,
   },
   data() {
     return {
@@ -272,6 +294,17 @@ export default {
     .rehab {
       background-color: #327ec7;
     }
+  }
+}
+
+/********************************** APPOINTMENT ********************************/
+.appointment {
+  background-image: url(../assets/img/appointment.jpg);
+  background-position: center;
+
+  h2,
+  p {
+    color: white;
   }
 }
 </style>
