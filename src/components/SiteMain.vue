@@ -22,7 +22,7 @@
         />
       </div>
     </section>
-    <!-- ./SERVICES SECTION -->
+    <!-- ./HOSPITAL FEATURES SECTION -->
 
     <section class="staff">
       <section-heading :icon="'icon-5.png'" :title="'MEET OUR DOCTORS'" />
@@ -38,6 +38,19 @@
       </div>
     </section>
     <!-- ./STAFF DOCTORS SECTION -->
+
+    <section class="services">
+      <section-heading :icon="'icon-6.png'" :title="'OUR HEALTH SERVICES'" />
+      <div class="row d-flex justify-between flex-wrap">
+        <features-card
+          v-for="service in services"
+          :key="service.icon"
+          :section_text="service.text"
+          :section_title="service.title"
+          :icon="service.icon"
+        />
+      </div>
+    </section>
   </main>
 </template>
 
@@ -97,6 +110,38 @@ export default {
           text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque",
         },
       ],
+      services: [
+        {
+          icon: "icon-14.png",
+          title: "rehabilitation center",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas",
+        },
+        {
+          icon: "icon-15.png",
+          title: "dental implants",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas",
+        },
+        {
+          icon: "icon-16.png",
+          title: "medicine research",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas",
+        },
+        {
+          icon: "icon-11.png",
+          title: "blood bank",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas",
+        },
+        {
+          icon: "icon-12.png",
+          title: "pharmaceutical advice",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas",
+        },
+        {
+          icon: "icon-13.png",
+          title: "medical counseling",
+          text: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas",
+        },
+      ],
     };
   },
 };
@@ -129,12 +174,26 @@ export default {
     }
   }
 }
+
 .staff {
   background-color: $bg_gray;
 
   .row {
     width: 60%;
     margin: auto;
+  }
+}
+
+.services {
+  .row {
+    width: 60%;
+    margin: auto;
+
+    .card {
+      width: 32%;
+      text-align: center;
+      line-height: 2.5rem;
+    }
   }
 }
 </style>

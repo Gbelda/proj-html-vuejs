@@ -31,8 +31,8 @@ export default {
   h2 {
     padding-bottom: 2.5rem;
     font-weight: 300;
-    color: gray;
     font-size: 2.5rem;
+    color: $text_primary;
   }
 
   hr {
@@ -42,8 +42,8 @@ export default {
 
   p {
     margin: auto;
-    width: 60%;
-    color: $text_gray;
+    width: 59%;
+    color: $text_primary;
     font-size: 1.2rem;
     font-weight: 300;
     line-height: 3rem;
