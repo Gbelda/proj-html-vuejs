@@ -31,7 +31,7 @@ export default {
   h2 {
     padding-bottom: 2.5rem;
     font-weight: 300;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     color: $text_primary;
   }
 

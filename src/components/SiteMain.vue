@@ -51,6 +51,45 @@
         />
       </div>
     </section>
+    <!-- ./SERVICES SECTION -->
+
+    <section class="facilities">
+      <div class="facilities_header d-flex flex-column align-center">
+        <section-heading :icon="'icon-7.png'" :title="'TOUR OUR FACILITIES'" />
+        <div class="play_container">
+          <img src="../assets/img/play-icon.png" alt="" id="play-icon" />
+        </div>
+      </div>
+      <!-- ./FACILITIES HEADER -->
+
+      <div class="departments d-flex">
+        <div class="facility emergency_care">
+          <h4>Emergency Care</h4>
+          <img src="../assets/img/wave-divider.png" alt="" />
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque
+          </p>
+        </div>
+        <div class="facility diagnostics">
+          <h4>Expert Diagnostics</h4>
+          <img src="../assets/img/wave-divider.png" alt="" />
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque
+          </p>
+        </div>
+        <div class="facility rehab">
+          <h4>Superb Rehabilitation</h4>
+          <img src="../assets/img/wave-divider.png" alt="" />
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque laudantium, totam rem aperiam, eaque
+          </p>
+        </div>
+      </div>
+      <!-- ./DEPARTMENTS -->
+    </section>
   </main>
 </template>
 
@@ -149,6 +188,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/variables.scss";
+/*********************************** FEATURES ***********************************/
 .features {
   width: 60%;
   margin: auto;
@@ -175,6 +215,7 @@ export default {
   }
 }
 
+/************************************* STAFF ***********************************/
 .staff {
   background-color: $bg_gray;
 
@@ -184,6 +225,7 @@ export default {
   }
 }
 
+/*********************************** SERVICES **********************************/
 .services {
   .row {
     width: 60%;
@@ -193,6 +235,66 @@ export default {
       width: 32%;
       text-align: center;
       line-height: 2.5rem;
+    }
+  }
+}
+
+/*********************************** FACILITIES ********************************/
+.facilities {
+  .facilities_header {
+    background-image: url(../assets/img/tour-facilities.jpg);
+    background-size: cover;
+    height: 700px;
+    background-position-y: center;
+  }
+
+  h2,
+  h4,
+  p {
+    color: white;
+  }
+
+  .play_container {
+    padding-bottom: 9rem;
+  }
+
+  .departments {
+    .facility {
+      width: calc(100% / 3);
+      text-align: center;
+      height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      line-height: 2.5rem;
+
+      img {
+        width: 10%;
+      }
+
+      h4 {
+        font-weight: 400;
+        font-size: 1.2rem;
+        padding-bottom: 0.5rem;
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 0.9rem;
+      }
+    }
+
+    .emergency_care {
+      background-color: #3aafbf;
+    }
+
+    .diagnostics {
+      background-color: #3597c3;
+    }
+
+    .rehab {
+      background-color: #327ec7;
     }
   }
 }
