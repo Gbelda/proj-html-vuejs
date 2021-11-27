@@ -150,8 +150,9 @@ footer {
           width: 95%;
           font-size: 0.8rem;
           line-height: 2rem;
-          color: gray;
+          color: $text_gray;
           margin: 1rem 0px;
+          font-weight: 300;
         }
 
         hr {
