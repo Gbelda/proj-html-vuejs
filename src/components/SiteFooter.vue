@@ -1,5 +1,5 @@
 <template>
-  <footer class="d-flex">
+  <footer class="d-flex justify-between">
     <div class="about_us">
       <div class="logo">
         <img src="../assets/img/medical_logo_1x_dark.png" alt="" />
@@ -38,11 +38,52 @@
         <h6>1.800.458.556</h6>
       </div>
     </div>
+    <!-- ./CONTACT INFO -->
+
+    <div class="med_departments">
+      <h4>MEDICAL DEPARTMENTS</h4>
+      <hr />
+      <ul class="index">
+        <li
+          v-for="department in departments"
+          :key="department.name"
+          class="d-flex align-center"
+        >
+          <div class="bullet d-flex justify-center align-center">
+            <i class="fas fa-chevron-right"></i>
+          </div>
+          <h6>{{ department.name }}</h6>
+        </li>
+      </ul>
+      <button>VIEW OUR DEPARTMENTS</button>
+    </div>
   </footer>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      departments: [
+        {
+          name: "Cardiology",
+        },
+        {
+          name: "Pediatrics",
+        },
+        {
+          name: "Diabetes Care",
+        },
+        {
+          name: "Pre-natel Care",
+        },
+        {
+          name: "Ultrasound Echocardiogram",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang='scss'>
@@ -50,9 +91,31 @@ export default {};
 
 footer {
   padding: 6rem;
+  /******************************************* COMMON ************************************************/
+  .contact_info,
+  .med_departments {
+    hr {
+      width: 35px;
+      border: none;
+      border-bottom: 2px solid $highlight_primary;
+      margin-bottom: 1.5rem;
+    }
 
-  .about_us {
+    h4 {
+      font-weight: 300;
+      color: $text_primary;
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .about_us,
+  .contact_info,
+  .med_departments {
     width: 32%;
+  }
+
+  /***************************************** ABOUT US ************************************************/
+  .about_us {
     .logo {
       img {
         width: 250px;
@@ -89,22 +152,8 @@ footer {
     }
   }
 
+  /*************************************** CONTACT INFO ********************************************/
   .contact_info {
-    width: 32%;
-
-    h4 {
-      font-weight: 400;
-      color: $text_primary;
-      margin-bottom: 1.5rem;
-    }
-
-    hr {
-      width: 35px;
-      border: none;
-      border-bottom: 2px solid $highlight_primary;
-      margin-bottom: 1.5rem;
-    }
-
     .icon {
       color: $highlight_primary;
       width: 16px;
@@ -116,6 +165,40 @@ footer {
       font-size: 0.9rem;
       margin-left: 1rem;
       color: gray;
+    }
+  }
+
+  /*********************************** MEDICAL DEPARTMENTS ******************************************/
+  .med_departments {
+    li {
+      margin-bottom: 0.5rem;
+
+      .bullet {
+        width: 20px;
+        height: 20px;
+        background-color: $highlight_primary;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+
+        i {
+          font-size: 0.5rem;
+          color: white;
+        }
+      }
+
+      h6 {
+        font-weight: 300;
+        color: gray;
+      }
+    }
+
+    button {
+      width: 50%;
+      height: 2.5rem;
+      background-color: transparent;
+      border: 1px solid gray;
+      color: $text_primary;
+      margin-top: 5rem;
     }
   }
 }

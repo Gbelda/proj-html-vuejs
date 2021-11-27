@@ -107,15 +107,9 @@
         >
           <img :src="require(`../assets/img/${partner.img}`)" alt="" />
         </div>
-        <div
-          class="img_card"
-          v-for="(partner, index) in partners"
-          :key="`${index} + 2`"
-        >
-          <img :src="require(`../assets/img/${partner.img}`)" alt="" />
-        </div>
       </div>
     </section>
+    <!-- ./PARTNERS -->
   </main>
 </template>
 
