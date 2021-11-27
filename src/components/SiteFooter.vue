@@ -147,6 +147,7 @@ footer {
       }
       .text_container {
         p {
+          width: 95%;
           font-size: 0.8rem;
           line-height: 2rem;
           color: gray;
