@@ -7,6 +7,7 @@
     <!-- ./SITE MAIN -->
 
     <site-footer />
+    <!-- ./SITE FOOTER -->
   </div>
 </template>
 

@@ -68,7 +68,6 @@
           :title="'TOUR OUR FACILITIES'"
           :withIcon="true"
         />
-
         <div class="video_element">
           <tour-video class="video" />
         </div>
