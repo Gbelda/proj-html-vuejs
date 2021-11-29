@@ -314,6 +314,12 @@ export default {
 
     img {
       filter: hue-rotate(50deg);
+      transition: transform 500ms ease;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+      }
     }
   }
 
@@ -353,7 +359,7 @@ export default {
 
   .container {
     width: 60%;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: auto;
 
     .img_card {
@@ -362,6 +368,18 @@ export default {
 
       img {
         padding-top: 2rem;
+        transition: transform 500ms ease;
+
+        &:hover {
+          transform: scale(1.1);
+          cursor: pointer;
+        }
+      }
+    }
+
+    &:hover {
+      .img_card {
+        animation-play-state: paused;
       }
     }
 

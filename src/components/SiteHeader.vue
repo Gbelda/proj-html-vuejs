@@ -98,6 +98,11 @@ header {
 
       li {
         padding-left: 3rem;
+
+        &:hover {
+          cursor: pointer;
+          color: #9e84d8;
+        }
       }
       .selected {
         color: $highlight_primary;

@@ -56,6 +56,10 @@ export default {};
       color: white;
       border: none;
       border-radius: 3px;
+
+      &:hover {
+        background-color: #695791;
+      }
     }
   }
 }

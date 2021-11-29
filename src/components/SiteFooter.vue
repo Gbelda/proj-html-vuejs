@@ -215,6 +215,11 @@ footer {
         h6 {
           font-weight: 300;
           color: gray;
+
+          &:hover {
+            cursor: pointer;
+            color: #9e84d8;
+          }
         }
       }
 
@@ -225,6 +230,12 @@ footer {
         border: 1px solid gray;
         color: $text_primary;
         margin-top: 5rem;
+
+        &:hover {
+          cursor: pointer;
+          background-color: #695791;
+          color: white;
+        }
       }
     }
   }
