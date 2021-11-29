@@ -68,9 +68,11 @@
           :title="'TOUR OUR FACILITIES'"
           :withIcon="true"
         />
-        <div class="play_container">
-          <img src="../assets/img/play-icon.png" alt="" id="play-icon" />
+
+        <div class="video_element">
+          <tour-video class="video" />
         </div>
+        <!-- ./VIDEO ELEMENT -->
       </div>
       <!-- ./FACILITIES HEADER -->
 
@@ -120,6 +122,7 @@ import FeaturesCard from "./FeaturesCard.vue";
 import StaffCard from "./StaffCard.vue";
 import DepartmentCard from "./DepartmentCard.vue";
 import AppointmentForm from "./AppointmentForm.vue";
+import TourVideo from "./TourVideo.vue";
 export default {
   components: {
     Jumbotron,
@@ -128,6 +131,7 @@ export default {
     FeaturesCard,
     DepartmentCard,
     AppointmentForm,
+    TourVideo,
   },
   data() {
     return {
@@ -307,20 +311,6 @@ export default {
   h4,
   p {
     color: white;
-  }
-
-  .play_container {
-    padding-bottom: 9rem;
-
-    img {
-      filter: hue-rotate(50deg);
-      transition: transform 500ms ease;
-
-      &:hover {
-        cursor: pointer;
-        transform: scale(1.1);
-      }
-    }
   }
 
   .departments {
