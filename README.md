@@ -1,2 +1,2 @@
-Landing page ok a Hospital website.
+Landing page of a Hospital website.
 Created using Vue.js
